@@ -1,7 +1,5 @@
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Github } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const projects = [
   {
@@ -10,7 +8,6 @@ const projects = [
     description: "A mouse operated purely through hand gestures, enabling users to control their computer without physical contact.",
     image: "/placeholder.svg",
     tags: ["Arduino", "Computer Vision", "Python"],
-    github: "#",
   },
   {
     id: 2,
@@ -18,7 +15,6 @@ const projects = [
     description: "A smart device using humidity and temperature sensors with Arduino IDE to detect termites and prevent wooden furniture damage.",
     image: "/placeholder.svg",
     tags: ["Arduino IDE", "IoT", "Sensors"],
-    github: "#",
   }
 ];
 
@@ -62,12 +58,6 @@ const Portfolio = () => {
                   {project.description}
                 </CardDescription>
               </CardContent>
-              <CardFooter>
-                <Button variant="outline" size="sm" className="gap-2">
-                  <Github size={16} />
-                  View on GitHub
-                </Button>
-              </CardFooter>
             </Card>
           ))}
         </div>
