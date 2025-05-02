@@ -9,7 +9,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'portfolio', 'skills', 'contact'];
+      const sections = ['home', 'about', 'portfolio', 'skills'];
       const scrollPosition = window.scrollY + 100;
       
       for (const section of sections) {
@@ -56,8 +56,7 @@ const Header = () => {
             { id: 'home', label: 'Home' },
             { id: 'about', label: 'About' },
             { id: 'portfolio', label: 'Portfolio' },
-            { id: 'skills', label: 'Skills' },
-            { id: 'contact', label: 'Contact' }
+            { id: 'skills', label: 'Skills' }
           ].map((item) => (
             <a
               key={item.id}
