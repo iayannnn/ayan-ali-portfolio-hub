@@ -14,6 +14,7 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
+  base:'/ayan-ali-portfolio-hub/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
