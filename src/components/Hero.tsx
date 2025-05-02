@@ -1,20 +1,16 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-
 const Hero = () => {
   const scrollToProjects = () => {
     const element = document.getElementById('portfolio');
     if (element) {
       window.scrollTo({
         top: element.offsetTop - 80,
-        behavior: 'smooth',
+        behavior: 'smooth'
       });
     }
   };
-
-  return (
-    <section id="home" className="min-h-screen flex items-center relative pb-10 pt-32">
+  return <section id="home" className="min-h-screen flex items-center relative pb-10 pt-32">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="flex flex-col justify-center animate-fade-in">
           <h2 className="text-xl font-medium text-primary-600 mb-4">Hello, I'm</h2>
@@ -30,43 +26,33 @@ const Hero = () => {
               View My Work
             </Button>
             <Button variant="outline" size="lg" onClick={() => {
-              const element = document.getElementById('contact');
-              if (element) {
-                window.scrollTo({
-                  top: element.offsetTop - 80,
-                  behavior: 'smooth',
-                });
-              }
-            }}>
+            const element = document.getElementById('contact');
+            if (element) {
+              window.scrollTo({
+                top: element.offsetTop - 80,
+                behavior: 'smooth'
+              });
+            }
+          }}>
               Contact Me
             </Button>
           </div>
         </div>
-        <div className="hidden md:flex justify-center items-center animate-fade-in-right">
-          <div className="relative rounded-full w-80 h-80 overflow-hidden border-8 border-white shadow-xl">
-            <img 
-              src="/public/lovable-uploads/504c2d3d-b5c2-4012-9091-689b9f61dc2f.png" 
-              alt="Ayan Ali Profile" 
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
+        
       </div>
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
         <Button variant="ghost" size="icon" onClick={() => {
-          const element = document.getElementById('about');
-          if (element) {
-            window.scrollTo({
-              top: element.offsetTop - 80,
-              behavior: 'smooth',
-            });
-          }
-        }}>
+        const element = document.getElementById('about');
+        if (element) {
+          window.scrollTo({
+            top: element.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      }}>
           <ArrowDown className="h-6 w-6 text-primary-600" />
         </Button>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
